@@ -148,6 +148,13 @@ def create_app():
     @app.route('/login', methods=['GET', 'POST'])
     def login():
         if current_user.is_authenticated:
+            # If already logged in and trying to access login page, redirect based on user type
+            next_page = request.args.get('next')
+            if next_page:
+                return redirect(next_page)
+            # Redirect admin users to admin dashboard, regular users to homepage
+            if hasattr(current_user, 'is_admin') and current_user.is_admin:
+                return redirect(url_for('admin_dashboard'))
             return redirect(url_for('index'))
         if request.method == 'POST':
             email = request.form.get('email', '').strip().lower()
@@ -157,6 +164,9 @@ def create_app():
                 login_user(user)
                 flash('Welcome back!', 'success')
                 next_page = request.args.get('next')
+                # If no next page specified, redirect admin to dashboard
+                if not next_page and hasattr(user, 'is_admin') and user.is_admin:
+                    return redirect(url_for('admin_dashboard'))
                 return redirect(next_page or url_for('index'))
             flash('Invalid email or password.', 'danger')
         return render_template('login.html')
