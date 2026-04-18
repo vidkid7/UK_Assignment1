@@ -1,1 +1,6 @@
-# Let Nixpacks auto-detect Python setup completely
+# Force Nixpacks to use Procfile instead of auto-detection
+[phases.setup]
+nixPkgs = ["python39"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
