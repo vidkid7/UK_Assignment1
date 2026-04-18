@@ -54,42 +54,65 @@ def capture_page(driver, path, filename, wait_time=2):
     return filepath
 
 
-def login_user(driver, email='demo@stylevault.com', password='Demo123!'):
-    """Log in a user via the login form."""
-    driver.get(f'{BASE_URL}/login')
-    time.sleep(1)
+def logout_user(driver):
+    """Log out the current user by visiting /logout."""
+    driver.get(f'{BASE_URL}/logout')
+    time.sleep(1.5)
+    print("[SCREENSHOT] Logged out.")
 
-    email_field = driver.find_element(By.NAME, 'email')
-    pass_field = driver.find_element(By.NAME, 'password')
+
+def login_user(driver, email='demo@stylevault.com', password='Demo123!', label='demo user'):
+    """Log in a user via the login form — targets the login form specifically."""
+    driver.get(f'{BASE_URL}/login')
+    time.sleep(1.5)
+
+    # If already logged in, Flask redirects /login → /; logout first
+    if '/login' not in driver.current_url:
+        logout_user(driver)
+        driver.get(f'{BASE_URL}/login')
+        time.sleep(1.5)
+
+    # Fill the login form fields (not the navbar search)
+    login_form = driver.find_element(By.CSS_SELECTOR, 'form[action*="login"]')
+    email_field = login_form.find_element(By.NAME, 'email')
+    pass_field  = login_form.find_element(By.NAME, 'password')
     email_field.clear()
     email_field.send_keys(email)
     pass_field.clear()
     pass_field.send_keys(password)
 
-    submit_btn = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+    # Click the submit button WITHIN the login form only
+    submit_btn = login_form.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
     submit_btn.click()
-    time.sleep(2)
-    print("[SCREENSHOT] User logged in.")
+    time.sleep(2.5)
+    print(f"[SCREENSHOT] Logged in as {label}.")
 
 
-def add_item_to_cart(driver):
-    """Add a product to the cart for checkout screenshots."""
-    driver.get(f'{BASE_URL}/product/silk-midi-dress')
-    time.sleep(1)
+def login_admin(driver):
+    """Log out current user then log in as admin for admin page screenshots."""
+    logout_user(driver)
+    login_user(driver, email='admin@stylevault.com', password='Admin123!', label='admin')
+
+
+def add_item_to_cart(driver, slug='silk-midi-dress'):
+    """Add a product to the cart — targets the add-to-cart form specifically."""
+    driver.get(f'{BASE_URL}/product/{slug}')
+    time.sleep(1.5)
 
     try:
-        # Select size
-        size_select = driver.find_element(By.NAME, 'size')
+        # Find the add-to-cart form by its action URL
+        cart_form = driver.find_element(By.CSS_SELECTOR, 'form[action*="cart/add"]')
+        size_select = cart_form.find_element(By.NAME, 'size')
         size_select.click()
-        time.sleep(0.5)
-        option = driver.find_element(By.CSS_SELECTOR, 'select[name="size"] option:nth-child(2)')
-        option.click()
+        time.sleep(0.3)
+        from selenium.webdriver.support.ui import Select
+        Select(size_select).select_by_index(1)
 
-        # Submit form
-        add_btn = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+        # Click the Add to Cart button (first button in the form)
+        add_btn = cart_form.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
         add_btn.click()
         time.sleep(2)
-        print("[SCREENSHOT] Item added to cart.")
+        print(f"[SCREENSHOT] Item added to cart: {slug}.")
     except Exception as e:
         print(f"[SCREENSHOT] Warning: Could not add to cart: {e}")
 
@@ -170,19 +193,7 @@ def capture_all_screenshots():
         add_item_to_cart(driver)
 
         # Add a second product to show multi-item cart
-        driver.get(f'{BASE_URL}/product/leather-chelsea-boots')
-        time.sleep(1)
-        try:
-            sel = driver.find_element(By.NAME, 'size')
-            sel.click()
-            time.sleep(0.3)
-            opt = driver.find_element(By.CSS_SELECTOR, 'select[name="size"] option:nth-child(2)')
-            opt.click()
-            btn = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
-            btn.click()
-            time.sleep(1.5)
-        except Exception as e:
-            print(f"[SCREENSHOT] Warning second add: {e}")
+        add_item_to_cart(driver, 'leather-chelsea-boots')
 
         paths['cart'] = capture_page(driver, '/cart', 'cart_page.png')
 
@@ -208,43 +219,47 @@ def capture_all_screenshots():
         paths['checkout_form'] = fp
         print("[SCREENSHOT] Saved: checkout_form.png")
 
+        # ── Admin pages — must log in as admin first ─────────────
+        print("[SCREENSHOT] Logging in as admin for admin screenshots...")
+        login_admin(driver)
+
         # Admin dashboard
-        paths['admin_dashboard'] = capture_page(driver, '/admin', 'admin_dashboard.png')
+        paths['admin_dashboard'] = capture_page(driver, '/admin', 'admin_dashboard.png', wait_time=2)
+
+        # Admin dashboard scrolled (orders + inventory tables)
+        driver.get(f'{BASE_URL}/admin')
+        time.sleep(2)
+        driver.execute_script("window.scrollTo(0, 400)")
+        time.sleep(0.8)
+        fp = os.path.join(OUTPUT_DIR, 'admin_dashboard_tables.png')
+        driver.save_screenshot(fp)
+        paths['admin_dashboard_tables'] = fp
+        print("[SCREENSHOT] Saved: admin_dashboard_tables.png")
 
         # ── Admin CRUD pages ─────────────────────────────────────
         print("[SCREENSHOT] Capturing admin CRUD pages...")
 
         # Admin analytics
-        paths['admin_analytics'] = capture_page(driver, '/admin/analytics', 'admin_analytics.png')
-
-        # Admin product management list
-        paths['admin_products_list'] = capture_page(driver, '/admin/products', 'admin_products_list.png')
-
-        # Admin add product form
-        paths['admin_add_product'] = capture_page(driver, '/admin/products/add', 'admin_add_product.png')
-
-        # Admin edit product (first product)
-        paths['admin_edit_product'] = capture_page(driver, '/admin/products/1/edit', 'admin_edit_product.png')
+        paths['admin_analytics'] = capture_page(driver, '/admin/analytics', 'admin_analytics.png', wait_time=2)
 
         # Admin analytics scrolled to tables
         driver.get(f'{BASE_URL}/admin/analytics')
-        time.sleep(1.5)
+        time.sleep(2)
         driver.execute_script("window.scrollTo(0, 400)")
-        time.sleep(0.5)
+        time.sleep(0.8)
         fp = os.path.join(OUTPUT_DIR, 'admin_analytics_tables.png')
         driver.save_screenshot(fp)
         paths['admin_analytics_tables'] = fp
         print("[SCREENSHOT] Saved: admin_analytics_tables.png")
 
-        # Admin dashboard scrolled (orders + inventory tables visible)
-        driver.get(f'{BASE_URL}/admin')
-        time.sleep(1.5)
-        driver.execute_script("window.scrollTo(0, 350)")
-        time.sleep(0.5)
-        fp = os.path.join(OUTPUT_DIR, 'admin_dashboard_tables.png')
-        driver.save_screenshot(fp)
-        paths['admin_dashboard_tables'] = fp
-        print("[SCREENSHOT] Saved: admin_dashboard_tables.png")
+        # Admin product management list
+        paths['admin_products_list'] = capture_page(driver, '/admin/products', 'admin_products_list.png', wait_time=2)
+
+        # Admin add product form
+        paths['admin_add_product'] = capture_page(driver, '/admin/products/add', 'admin_add_product.png', wait_time=2)
+
+        # Admin edit product (first product)
+        paths['admin_edit_product'] = capture_page(driver, '/admin/products/1/edit', 'admin_edit_product.png', wait_time=2)
 
         # ── Responsiveness screenshots ──────────────────────────
         print("[SCREENSHOT] Capturing responsive design screenshots...")
