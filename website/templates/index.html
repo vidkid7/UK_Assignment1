@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="hero-card d-flex align-items-end p-4" style="background: url('{{ url_for('static', filename='images/hero/hero_women.jpg') }}') center/cover no-repeat;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-text">
+                        <h2>SULTRY &amp; SMART</h2>
+                        <p>HOT SPRING LOOKS</p>
+                        <a href="{{ url_for('products', slug='women') }}" class="btn btn-outline-light btn-sm">Shop Women</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="hero-card d-flex align-items-end p-4" style="background: url('{{ url_for('static', filename='images/hero/hero_men.jpg') }}') center/cover no-repeat;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-text">
+                        <h2>ELEGANT &amp; SLICK</h2>
+                        <p>GET READY FOR SUMMER</p>
+                        <a href="{{ url_for('products', slug='men') }}" class="btn btn-outline-light btn-sm">Shop Men</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Arrivals -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">NEW ARRIVALS</h2>
+        <div class="row g-4">
+            {% for product in new_arrivals %}
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <a href="{{ url_for('product_detail', slug=product.slug) }}">
+                        <div class="product-image-wrapper">
+                            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-img">
+                            <span class="brand-tag">{{ product.brand|upper }}</span>
+                            {% if product.sale_price %}<span class="sale-tag">SALE</span>{% endif %}
+                            <div class="quick-add-overlay">
+                                <p class="quick-add-label mb-1">QUICK ADD</p>
+                                <div class="quick-size-row">
+                                    {% for size in product.sizes.split(',') %}
+                                    <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post" class="d-inline">
+                                        <input type="hidden" name="size" value="{{ size.strip() }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="quick-size-chip">{{ size.strip() }}</button>
+                                    </form>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-info mt-2">
+                        <p class="product-name mb-1">{{ product.name }}</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="product-price mb-0">
+                                {% if product.sale_price %}
+                                <span class="text-decoration-line-through text-muted me-1 small">&pound;{{ "%.2f"|format(product.price) }}</span>
+                                <span class="text-danger fw-bold">&pound;{{ "%.2f"|format(product.sale_price) }}</span>
+                                {% else %}
+                                <span class="fw-semibold text-dark">&pound;{{ "%.2f"|format(product.price) }}</span>
+                                {% endif %}
+                            </p>
+                            <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post" class="d-inline">
+                                <input type="hidden" name="size" value="{{ product.sizes.split(',')[0].strip() }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn-quick-cart" title="Add to Cart">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">FEATURED COLLECTION</h2>
+        <div class="row g-4">
+            {% for product in featured %}
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <a href="{{ url_for('product_detail', slug=product.slug) }}">
+                        <div class="product-image-wrapper">
+                            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-img">
+                            <span class="brand-tag">{{ product.brand|upper }}</span>
+                            {% if product.sale_price %}<span class="sale-tag">SALE</span>{% endif %}
+                            <div class="quick-add-overlay">
+                                <p class="quick-add-label mb-1">QUICK ADD</p>
+                                <div class="quick-size-row">
+                                    {% for size in product.sizes.split(',') %}
+                                    <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post" class="d-inline">
+                                        <input type="hidden" name="size" value="{{ size.strip() }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="quick-size-chip">{{ size.strip() }}</button>
+                                    </form>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-info mt-2">
+                        <p class="product-name mb-1">{{ product.name }}</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="product-price mb-0">
+                                {% if product.sale_price %}
+                                <span class="text-decoration-line-through text-muted me-1 small">&pound;{{ "%.2f"|format(product.price) }}</span>
+                                <span class="text-danger fw-bold">&pound;{{ "%.2f"|format(product.sale_price) }}</span>
+                                {% else %}
+                                <span class="fw-semibold text-dark">&pound;{{ "%.2f"|format(product.price) }}</span>
+                                {% endif %}
+                            </p>
+                            <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post" class="d-inline">
+                                <input type="hidden" name="size" value="{{ product.sizes.split(',')[0].strip() }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn-quick-cart" title="Add to Cart">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Promo Banner -->
+<section class="promo-banner py-4">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-3">
+                <i class="bi bi-truck fs-3"></i>
+                <p class="small mb-0 mt-1 fw-bold">FREE UK DELIVERY</p>
+                <p class="small text-muted">On all orders</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <i class="bi bi-arrow-repeat fs-3"></i>
+                <p class="small mb-0 mt-1 fw-bold">EASY RETURNS</p>
+                <p class="small text-muted">30-day returns</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <i class="bi bi-shield-lock fs-3"></i>
+                <p class="small mb-0 mt-1 fw-bold">SECURE PAYMENT</p>
+                <p class="small text-muted">SSL encrypted</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <i class="bi bi-headset fs-3"></i>
+                <p class="small mb-0 mt-1 fw-bold">24/7 SUPPORT</p>
+                <p class="small text-muted">Dedicated team</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section py-5 text-center">
+    <div class="container">
+        <h3 class="mb-2">GET ON THE LIST</h3>
+        <p class="text-muted mb-3">Be the first to shop new arrivals and exclusive promotions.</p>
+        <form class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email here">
+                    <button class="btn btn-dark px-4" type="button">Subscribe Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

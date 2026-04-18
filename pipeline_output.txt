@@ -1,0 +1,394 @@
+C:\collection\1\8\diagrams\generate_all_v2.py:2437: UserWarning: Setting the 'color' property will override the edgecolor or facecolor properties.
+  ax.add_patch(plt.Rectangle((0, 9.2), 10, 1.6, color='#F8F8F8',
+C:\collection\1\8\diagrams\generate_all_v2.py:2450: UserWarning: Glyph 128205 (\N{ROUND PUSHPIN}) missing from current font.
+  plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+C:\collection\1\8\diagrams\generate_all_v2.py:2452: UserWarning: Glyph 128205 (\N{ROUND PUSHPIN}) missing from current font.
+  plt.savefig(out, dpi=300, bbox_inches='tight', facecolor=fig.get_facecolor())
+
+======================================================================
+  STYLEVAULT ΓÇö GROUP PROJECT ASSIGNMENT GENERATOR
+  Full Pipeline: Diagrams ΓåÆ Website ΓåÆ Screenshots ΓåÆ Report
+======================================================================
+[SETUP] Output directories created.
+
+[STEP 1/4] Generating project diagrams...
+
+============================================================
+  GENERATING ALL HIGH-QUALITY DIAGRAMS (v2 ┬╖ 300 DPI)
+============================================================
+  [OK] gantt_chart.png
+  [OK] wbs_diagram.png
+  [OK] use_case_diagram.png
+  [OK] activity_diagram.png
+  [OK] sequence_diagram.png
+  [OK] er_diagram.png
+  [OK] site_map.png
+  [OK] pert_chart.png
+  [OK] wireframe_homepage.png
+  [OK] wireframe_products.png
+  [OK] wireframe_product_detail.png
+  [OK] wireframe_cart.png
+  [OK] wireframe_checkout.png
+  [OK] risk_matrix.png
+  [OK] critical_path.png
+  [OK] flowchart_auth.png
+  [OK] flowchart_checkout.png
+  [OK] architecture_diagram.png
+  [OK] product_backlog.png
+  [OK] sprint_backlog.png
+  [OK] class_diagram.png
+  [OK] state_diagram.png
+  [OK] user_personas.png
+
+  Done. 23/23 diagrams generated.
+
+[STEP 2/4] Starting Flask web server...
+[SERVER] Flask server starting on http://127.0.0.1:5000 ...
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [19/Apr/2026 00:11:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/w2.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/w4.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/m1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/m3.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/a3.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/m6.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/a1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/a4.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/a2.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/s1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/w1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:02] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /collection/women HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w5.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w6.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w3.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:04] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /collection/men HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m2.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m4.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m5.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:06] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /collection/accessories HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:08] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /product/silk-midi-dress HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:10] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:13] "GET /contact HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:13] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:15] "GET /about HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:15] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:17] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:17] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:19] "GET /register HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:19] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:21] "GET /search?q=dress HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:21] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:21] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:21] "GET /static/images/s2.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /collection?min_price=100&max_price=400&sort=price_low HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/m2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/m5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/m4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/s2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/w6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:23] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /collection?sort=price_high HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/s2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/m4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:25] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /product/italian-wool-suit HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/images/m2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/images/m4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:27] "GET /static/images/m5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:29] "GET /product/cotton-polo-shirt HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:29] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:29] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:29] "GET /static/images/s2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:31] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:35] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:35] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /search?q= HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:36] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:38] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /product/leather-chelsea-boots HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/images/m2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/images/m4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:40] "GET /static/images/m5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /collection/women HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:42] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /product/silk-midi-dress HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:44] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /product/leather-chelsea-boots HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/images/m2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/images/m4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:48] "GET /static/images/m5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:51] "GET /cart HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:51] "GET /login?next=/cart HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:51] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:53] "GET /cart HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:53] "GET /login?next=/cart HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:53] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:55] "GET /checkout HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:55] "GET /login?next=/checkout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:55] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:57] "GET /checkout HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:57] "GET /login?next=/checkout HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:57] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:11:59] "GET /admin HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:11:59] "GET /login?next=/admin HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:11:59] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:01] "GET /admin/analytics HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:01] "GET /login?next=/admin/analytics HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:01] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:03] "GET /admin/products HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:03] "GET /login?next=/admin/products HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:03] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:05] "GET /admin/products/add HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:05] "GET /login?next=/admin/products/add HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:05] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:07] "GET /admin/products/1/edit HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:07] "GET /login?next=/admin/products/1/edit HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:07] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:10] "GET /admin/analytics HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:10] "GET /login?next=/admin/analytics HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:10] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:12] "GET /admin HTTP/1.1" 302 -
+127.0.0.1 - - [19/Apr/2026 00:12:12] "GET /login?next=/admin HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:12] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:15] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /collection/women HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:17] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:18] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/a2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/a3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/a4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/s1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/m1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/m3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/m6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/hero/hero_women.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/hero/hero_men.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:21] "GET /static/images/a1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /collection/women HTTP/1.1" 200 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w4.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w5.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w3.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w6.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w1.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Apr/2026 00:12:22] "GET /static/images/w2.jpg HTTP/1.1" 304 -
+[SERVER] Flask server is ready.
+
+[STEP 3/4] Capturing website screenshots...
+
+============================================================
+  CAPTURING WEBSITE SCREENSHOTS
+============================================================
+[SCREENSHOT] Saved: homepage.png
+[SCREENSHOT] Saved: products_women.png
+[SCREENSHOT] Saved: products_men.png
+[SCREENSHOT] Saved: products_accessories.png
+[SCREENSHOT] Saved: product_detail.png
+[SCREENSHOT] Saved: contact_page.png
+[SCREENSHOT] Saved: about_page.png
+[SCREENSHOT] Saved: login_page.png
+[SCREENSHOT] Saved: register_page.png
+[SCREENSHOT] Saved: search_results.png
+[SCREENSHOT] Saved: filtered_products.png
+[SCREENSHOT] Saved: sorted_products.png
+[SCREENSHOT] Saved: product_detail_men.png
+[SCREENSHOT] Saved: product_detail_sale.png
+[SCREENSHOT] Saved: homepage_new_arrivals.png
+[SCREENSHOT] Saved: homepage_footer.png
+[SCREENSHOT] User logged in.
+[SCREENSHOT] Saved: homepage_loggedin.png
+[SCREENSHOT] Saved: product_detail_loggedin.png
+[SCREENSHOT] Saved: product_listing_quickadd.png
+[SCREENSHOT] Item added to cart.
+[SCREENSHOT] Saved: cart_page.png
+[SCREENSHOT] Saved: cart_summary.png
+[SCREENSHOT] Saved: checkout_page.png
+[SCREENSHOT] Saved: checkout_form.png
+[SCREENSHOT] Saved: admin_dashboard.png
+[SCREENSHOT] Capturing admin CRUD pages...
+[SCREENSHOT] Saved: admin_analytics.png
+[SCREENSHOT] Saved: admin_products_list.png
+[SCREENSHOT] Saved: admin_add_product.png
+[SCREENSHOT] Saved: admin_edit_product.png
+[SCREENSHOT] Saved: admin_analytics_tables.png
+[SCREENSHOT] Saved: admin_dashboard_tables.png
+[SCREENSHOT] Capturing responsive design screenshots...
+[SCREENSHOT] Saved: responsive_mobile_homepage.png
+[SCREENSHOT] Saved: responsive_mobile_products.png
+[SCREENSHOT] Saved: responsive_mobile_nav.png
+[SCREENSHOT] Saved: responsive_mobile_menu.png
+[SCREENSHOT] Saved: responsive_tablet_homepage.png
+[SCREENSHOT] Saved: responsive_tablet_products.png
+
+[DONE] Captured 36 screenshots successfully.
+
+[STEP 4/4] Generating .docx report...
+
+============================================================
+  GENERATING ASSIGNMENT REPORT v2 (.docx)
+============================================================
+
+[DONE] Report saved: C:\collection\1\8\output\StyleVault_Group_Project_Report.docx
+       Open in Microsoft Word and press Ctrl+A then F9 to update TOC and TOF fields.
+
+======================================================================
+  PIPELINE COMPLETE!
+======================================================================
+  Diagrams generated: 23
+  Screenshots captured: 36
+  Report saved to: C:\collection\1\8\output\StyleVault_Group_Project_Report.docx
+
+  IMPORTANT: After opening the .docx file in Microsoft Word:
+  1. Press Ctrl+A to select all
+  2. Press F9 to update all fields (TOC, TOF, page numbers)
+  3. Review and adjust formatting as needed
+======================================================================

@@ -1,58 +1,9 @@
-# Python
+output/
 __pycache__/
-*.py[cod]
-*$py.class
 *.pyc
 *.pyo
-*.pyd
-.Python
-
-# Virtual environments
-venv/
-env/
-.venv/
-.env/
-ENV/
-
-# Environment files — NEVER commit secrets
 .env
-*.env
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
 instance/
-
-# IDE / Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*.sublime-project
-*.sublime-workspace
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Output / generated files (diagrams, screenshots, report)
-output/
-pipeline_output.txt
-
-# Selenium / WebDriver cache
-.wdm/
-
-# Logs
-*.log
-logs/
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-.eggs/
-
-# Coverage
-.coverage
-htmlcov/
+*.db
+website/__pycache__/
+website/instance/

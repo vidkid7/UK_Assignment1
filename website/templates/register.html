@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="text-center mb-4">
+                <h2 class="auth-title">Sign Up</h2>
+                <p class="text-muted">Already a member? <a href="{{ url_for('login') }}">Log In</a></p>
+            </div>
+
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-outline-primary"><i class="bi bi-facebook me-2"></i>Sign up with Facebook</button>
+                <button class="btn btn-outline-danger"><i class="bi bi-google me-2"></i>Sign up with Google</button>
+            </div>
+
+            <div class="text-center my-3">
+                <span class="text-muted small">or</span>
+            </div>
+
+            <form method="post" action="{{ url_for('register') }}">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label small">First Name</label>
+                        <input type="text" class="form-control" name="first_name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label small">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label small">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label small">Password</label>
+                    <input type="password" class="form-control" name="password" minlength="6" required>
+                    <div class="form-text">Must be at least 6 characters.</div>
+                </div>
+                <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <small class="text-muted">or sign up with</small>
+                <div class="mt-2">
+                    <a href="#" class="me-2"><i class="bi bi-facebook text-primary fs-5"></i></a>
+                    <a href="#"><i class="bi bi-google text-danger fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
